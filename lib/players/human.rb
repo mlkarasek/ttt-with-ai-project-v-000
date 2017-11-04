@@ -7,4 +7,5 @@ module Players
       position.gets.strip
       position
     end
-  end 
+  end
+end 
