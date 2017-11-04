@@ -25,7 +25,7 @@ class Board
 
   def full
    @cells.all?{|space| space != " "}
-end 
+end
 
 def turn_count
   counter = 0
@@ -36,15 +36,15 @@ def turn_count
    end
   counter
  end
-end 
+end
 
 def taken?
-end 
+end
 
 def valid_move?
-end 
+end
 
-def update 
-end 
+def update
+end
 
 end
