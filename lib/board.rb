@@ -57,4 +57,4 @@ def update(position, player)
   @cells[index] = player.token
 end
 
-end 
+
