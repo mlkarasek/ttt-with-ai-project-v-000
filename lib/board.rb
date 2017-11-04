@@ -44,7 +44,15 @@ def taken?(position)
 end
 
 def valid_move?
+  index = position.to_i - 1
+if @cells[index] == " " && index.between?(0,8)
+  true 
+else 
+  false
+end 
 end
 
-def update
+def update(position, player)
+  index = position.to_i - 1
+  @cells[index] = player.token
 end
