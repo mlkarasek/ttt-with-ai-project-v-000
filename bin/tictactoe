@@ -3,4 +3,4 @@
 require_relative '../config/environment'
 
 Game.new.start
-puts "Would you like to play?"
+puts "Would you like to play a game of Tic Tac Toe?"
