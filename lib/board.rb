@@ -19,12 +19,9 @@ class Board
   end
 
   def position
-    if @board[number] == " " || @board[number] == "" || @board[number] == nil
-      return false
-    else
-      return true
-    end
-  end
+    index = user_input.to_i - 1
+    @cells.fetch(index)
+  end 
 
-  
+
 end
