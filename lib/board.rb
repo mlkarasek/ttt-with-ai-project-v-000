@@ -1,13 +1,13 @@
 class Board
 
-  attr_accessor :board 
+  attr_accessor :board
   attr_reader :game, :player
 
   def initialize(board)
-    @board = = Array.new(9," ")
+    @board = Array.new(9," ")
   end
 
-  def self.reset 
+  def self.reset
       all.clear
     end
 
