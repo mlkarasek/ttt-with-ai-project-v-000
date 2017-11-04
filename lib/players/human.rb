@@ -8,4 +8,4 @@ module Players
       position
     end
   end
-end 
+end
