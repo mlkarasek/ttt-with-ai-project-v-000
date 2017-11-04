@@ -18,4 +18,4 @@ class Board
     puts "-----------"
     puts " #{@cells[6]} | #{@cells[7]} | #{@cells[8]} "
   end
-
+end 
