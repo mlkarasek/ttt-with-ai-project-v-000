@@ -3,7 +3,6 @@ class Board
   attr_accessor :cells
 
   def initialize
-    @board = Board.new
     self.reset!
   end
 
