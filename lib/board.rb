@@ -38,7 +38,9 @@ def turn_count
  end
 end
 
-def taken?
+def taken?(position)
+  index = position.to_i - 1
+    @cells[index] != " "
 end
 
 def valid_move?
