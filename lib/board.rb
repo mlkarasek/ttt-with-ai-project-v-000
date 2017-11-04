@@ -23,5 +23,8 @@ class Board
     @cells.fetch(index)
   end 
 
+  def full 
+   @cells.all?{|space| space != " "}
+end 
 
 end
