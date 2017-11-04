@@ -21,10 +21,30 @@ class Board
   def position
     index = user_input.to_i - 1
     @cells.fetch(index)
-  end 
+  end
 
-  def full 
+  def full
    @cells.all?{|space| space != " "}
+end 
+
+def turn_count
+  counter = 0
+   @cells.each do |turn|
+     if turn.downcase == "x" || turn.downcase == "o"
+        counter += 1
+     end
+   end
+  counter
+ end
+end 
+
+def taken?
+end 
+
+def valid_move?
+end 
+
+def update 
 end 
 
 end
