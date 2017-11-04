@@ -1,15 +1,10 @@
 class Board
 
-  attr_accessor :board
-  attr_reader :game, :player
+  attr_accessor :cells
 
-  def initialize(board)
-    @board = Array.new(9," ")
+  def initialize
+    self.reset!
   end
-
-  def self.reset
-      all.clear
-    end
 
     def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
