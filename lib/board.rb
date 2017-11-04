@@ -1,5 +1,4 @@
 class Board
-
   attr_accessor :cells
 
   def initialize
@@ -10,7 +9,7 @@ class Board
     @cells = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
   end
 
-    def display
+  def display
     puts " #{@cells[0]} | #{@cells[1]} | #{@cells[2]} "
     puts "-----------"
     puts " #{@cells[3]} | #{@cells[4]} | #{@cells[5]} "
@@ -23,38 +22,36 @@ class Board
     @cells.fetch(index)
   end
 
-  def full
-   @cells.all?{|space| space != " "}
-end
+  def full?
+    @cells.all?{|space| space != " "}
+  end
 
-def turn_count
-  counter = 0
-   @cells.each do |turn|
-     if turn.downcase == "x" || turn.downcase == "o"
-        counter += 1
-     end
-   end
-  counter
- end
-end
+  def turn_count
+    counter = 0
+    @cells.each do |turn|
+      if turn.downcase == "x" || turn.downcase == "o"
+         counter += 1
+      end
+    end
+   counter
+  end
 
-def taken?(position)
-  index = position.to_i - 1
+  def taken?(position)
+    index = position.to_i - 1
     @cells[index] != " "
-end
+  end
 
-def valid_move?
-  index = position.to_i - 1
-if @cells[index] == " " && index.between?(0,8)
-  true
-else
-  false
-end
-end
+  def valid_move?(position)
+    index = position.to_i - 1
+    if @cells[index] == " " && index.between?(0,8)
+      true
+    else
+      false
+    end
+  end
 
-def update(position, player)
-  index = position.to_i - 1
-  @cells[index] = player.token
+  def update(position, player)
+    index = position.to_i - 1
+    @cells[index] = player.token
+  end
 end
-
-
